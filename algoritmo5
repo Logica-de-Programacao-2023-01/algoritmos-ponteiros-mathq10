@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func Media(num *float64) {
+	*num = (*num + math.Pi) / 2
+
+}
+
+func main() {
+	num := 4.00
+	Media(&num)
+	fmt.Println(num)
+}
