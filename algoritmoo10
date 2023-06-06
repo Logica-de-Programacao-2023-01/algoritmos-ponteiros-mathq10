@@ -1,0 +1,25 @@
+package main
+
+
+func ePrimo(num int) bool {
+	if num <= 1 {
+		return false
+	}
+	for i := 2; i*i <= num; i++ {
+		if num%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+func primos(ptr *[]int, tamanho int) {
+	contador := 0
+	numero := 2
+	for contador < tamanho {
+		if ePrimo(numero) {
+			*ptr = append(*ptr, numero)
+			contador++
+		}
+		numero++
+	}
+}
