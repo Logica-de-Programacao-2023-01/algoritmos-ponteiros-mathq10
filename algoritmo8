@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func modificar(ptr *int) {
+	*ptr = 32
+	if ptr != nil {
+		fmt.Println(*ptr)
+	} else {
+		fmt.Println("ponteiro esta vazio")
+	}
+}
+func main() {
+	num := 10
+	modificar(&num)
+}
