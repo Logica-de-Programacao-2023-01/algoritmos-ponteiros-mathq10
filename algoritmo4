@@ -1,0 +1,8 @@
+package main
+
+func atualizaSoma(num *int) {
+	ultimoNum := *num % 10
+	penulitmoNum := (*num / 10) % 10
+	soma := ultimoNum + penulitmoNum
+	*num = soma
+}
