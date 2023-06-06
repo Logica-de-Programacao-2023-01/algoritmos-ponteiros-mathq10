@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func parImpar(ptr *int) {
+	var num int
+	if num%2 == 0 {
+		num = 0
+	} else {
+		num = 1
+	}
+	*ptr = num
+}
+func main() {
+	num := 24
+	parImpar(&num)
+	fmt.Print(num)
+}

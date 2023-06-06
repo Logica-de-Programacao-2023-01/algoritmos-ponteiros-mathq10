@@ -1,0 +1,16 @@
+package main
+
+import (
+	"unicode/utf8"
+)
+
+func reverseString(ptr *string) {
+	runes := []rune(*ptr)
+
+	tamanho := utf8.RuneCountInString(*ptr)
+
+	for i, j := 0, tamanho-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	*ptr = string(runes)
+}
